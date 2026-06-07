@@ -134,6 +134,27 @@ ESP 标志：必须设置
 | xfs | /home、/var | 适合大文件、高性能场景 |
 | btrfs | /、/home | 支持快照、压缩、RAID |
 
+## 启动参数设置
+
+主要用于在部分特殊情况下部署安装系统时设置启动参数，如禁用开源驱动 Nouveau 等。
+
+1. 从USB/DVD启动安装镜像，出现 GRUB菜单（"Try or Install Ubuntu"界面）
+2. 选中安装选项，按 e 键进入编辑模式
+3. 找到以 linux 或 linuxefi 开头的行（通常包含 quiet splash）
+4. 在行末（--- 之前）添加参数：
+
+   ```bash
+   nomodeset
+   ```
+
+   ✅ 完整示例：
+
+   ```text
+   linux /casper/vmlinuz ... quiet splash nomodeset ---
+   ```
+
+5. 按 Ctrl+X 或 F10 用修改后的参数启动
+
 ## Ubuntu
 
 ### 安装 NVIDIA GPU drivers

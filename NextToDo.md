@@ -10,8 +10,9 @@
 
 1. 运维
 2. 前端
-3. AI专项应用
+3. AI专项应用（ agents+claw\ skills\ MCP）
 4. 虚拟机**软件\平台**部署配置 -> 云计算
 5. 系统软件编译
 6. Linux运行Windows应用(Wine\PlayOnLinux)
 7. 广电监RPA交付
+8. pytorch
